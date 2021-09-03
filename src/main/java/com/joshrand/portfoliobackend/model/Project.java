@@ -24,9 +24,11 @@ public class Project {
     private List<Slide> slides = new ArrayList<Slide>();
 
     public Project() {
+    	super();
     }
 
     public Project( String title, String description, String[] technologies, String github, String image, String demo, List<Tile> tiles, List<Slide> slides) {
+    	super();
         this.title = title;
         this.description = description;
         this.technologies = technologies;

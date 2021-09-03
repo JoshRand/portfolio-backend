@@ -15,9 +15,25 @@
 	<description>Demo project for Spring Boot</description>
 	<properties>
 		<java.version>8</java.version>
+		<skipTests>true</skipTests>
 	</properties>
-
 	<dependencies>
+		<!-- https://mvnrepository.com/artifact/org.junit.jupiter/junit-jupiter-api -->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
+			<scope>test</scope>
+		</dependency>
+		 <dependency>
+			  <groupId>org.mariadb.jdbc</groupId>
+			  <artifactId>mariadb-java-client</artifactId>
+		 </dependency>
+
+		<dependency>
+		  <groupId>org.mockito</groupId>
+		  <artifactId>mockito-core</artifactId>
+		  <scope>compile</scope>
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -56,6 +72,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
+					<skipTests>${skipTests}</skipTests>
 					<!-- <failOnMissingWebXml>false</failOnMissingWebXml> -->
 				</configuration>
 			</plugin>
